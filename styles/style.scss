@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,600,600i');
+
+$headings: 'Raleway', sans-serif;
+$body: 'Open Sans', sans-serif;
+
+$colors: (
+  soft-blue: hsl(243, 86%, 85%),
+  very-dark-blue: hsl(243, 87%, 12%),
+  green: hsl(163, 95%, 43%),
+  dark-blue: hsl(243, 58%, 33%),
+  grey: hsl(0, 0%, 50%)
+);
+@function colors($color-name) {
+  @return map-get ($colors, $colors-name)
+}
+
+$mobile: 375px;
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
