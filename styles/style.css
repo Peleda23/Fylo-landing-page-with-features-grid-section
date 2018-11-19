@@ -1,2 +1,153 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,600,600i");
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.cont1 {
+  padding: 25px 40px 0 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "nav nav nav nav" "div1 div1 div2 div2";
+  background-image: -webkit-gradient(linear, left top, right top, from(#060339), color-stop(#312d65), color-stop(#5d5893), color-stop(#8b86c5), to(#bbb7f9));
+  background-image: linear-gradient(to right, #060339, #312d65, #5d5893, #8b86c5, #bbb7f9);
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 88%, 0 0);
+          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 88%, 0 0);
+  height: 80vh;
+}
+
+.cont1 .navbar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cont1 .navbar .buttons .btn1 {
+  border: none;
+  background: none;
+  color: white;
+}
+
+.cont1 .navbar .buttons .btn2 {
+  border: none;
+  background: #05d69b;
+  color: white;
+  height: 25px;
+  width: 75px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.cont1 .heading {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: div1;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 100px;
+}
+
+.cont1 .heading h1 {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.cont1 .heading button {
+  border: none;
+  background: #05d69b;
+  color: white;
+  border-radius: 3px;
+  height: 35px;
+  width: 150px;
+}
+
+.cont1 .img1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: div2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 100px;
+}
+
+.cont1 .img1 img {
+  height: 300px;
+}
+
+.cont2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "top top top" "img-box box1 box2" "img-box box3 box4" "bbox bbox bbox";
+}
+
+.cont2 .top-box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: top;
+  text-align: center;
+}
+
+.cont2 .img-box {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img-box;
+}
+
+.cont2 .box1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: box1;
+}
+
+.cont2 .box2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: box2;
+}
+
+.cont2 .box3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: box3;
+}
+
+.cont2 .box4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: box4;
+}
+
+.cont2 .bottom-box {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: bbox;
+}
 /*# sourceMappingURL=style.css.map */

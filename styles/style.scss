@@ -2,21 +2,127 @@
 
 $headings: 'Raleway', sans-serif;
 $body: 'Open Sans', sans-serif;
+$padding-side: 40px;
+$padding-top: 25px;
+$padding-bottom: 100px;
 
 $colors: (
-  soft-blue: hsl(243, 86%, 85%),
-  very-dark-blue: hsl(243, 87%, 12%),
-  green: hsl(163, 95%, 43%),
-  dark-blue: hsl(243, 58%, 33%),
+  soft-blue: #bbb7f9,
+  very-dark-blue: #060339,
+  green1: hsl(163, 95%, 43%),
+  dark-blue: #282384,
   grey: hsl(0, 0%, 50%)
 );
-@function colors($color-name) {
-  @return map-get ($colors, $colors-name)
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
 }
 
 $mobile: 375px;
 @mixin mobile {
   @media (min-width: #{$mobile}) {
     @content;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: $body;
+}
+
+.cont1 {
+  padding: $padding-top $padding-side 0 $padding-side;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "nav nav nav nav"
+    "div1 div1 div2 div2";
+    background-image: linear-gradient(to right, #060339, #312d65, #5d5893, #8b86c5, #bbb7f9);
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 88%, 0 0);
+  height: 80vh;   
+  .navbar {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    .buttons {
+      .btn1 {
+        border: none;
+        background: none;
+        color: white;
+      }
+      .btn2 {
+        border: none;
+        background: color(green1);
+        color: white;
+        height: 25px;
+        width: 75px;
+        font-weight: 700;
+        border-radius: 3px;
+      }
+    }
+  }
+  .heading {
+    grid-area: div1;
+    justify-self: center;
+    align-self: center;
+    padding-bottom: $padding-bottom;
+    h1 {
+      color: white;
+      font-family: $headings;
+      text-transform: capitalize;
+      font-size: 30px;
+    }
+    button {
+      border: none;
+      background: color(green1);
+      color: white;
+      border-radius: 3px;
+      height: 35px;
+      width: 150px;
+    }
+  }
+  .img1 {
+    grid-area: div2;
+    // text-align: center;
+    justify-self: center;
+    align-self: center;
+    padding-bottom: $padding-bottom;
+    img {
+      height: 300px;
+    }
+  }
+}
+
+.cont2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "top top top"
+    "img-box box1 box2"
+    "img-box box3 box4"
+    "bbox bbox bbox";
+  .top-box {
+    grid-area: top;
+    text-align: center;
+  }
+  .img-box {
+    grid-area: img-box;
+  }  
+  .box1 {
+    grid-area: box1;
+  }
+  .box2 {
+    grid-area: box2;
+  }
+  .box3 {
+    grid-area: box3;
+  }
+  .box4 {
+    grid-area: box4;
+  }
+  .bottom-box {
+    grid-area: bbox;
   }
 }
