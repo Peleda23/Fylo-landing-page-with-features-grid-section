@@ -98,11 +98,23 @@ body {
 .cont2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+  grid-column-gap: 70px;
       grid-template-areas: "top top top" "img-box box1 box2" "img-box box3 box4" "bbox bbox bbox";
+  padding: 0 40px 0 40px;
+}
+
+.cont2 h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.cont2 p {
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .cont2 .top-box {
@@ -111,6 +123,13 @@ body {
   -ms-grid-column-span: 3;
   grid-area: top;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.cont2 .top-box h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
 }
 
 .cont2 .img-box {
@@ -118,6 +137,17 @@ body {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: img-box;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+.cont2 .img-box img {
+  max-width: 100%;
+  height: auto;
 }
 
 .cont2 .box1 {
@@ -145,9 +175,54 @@ body {
 }
 
 .cont2 .bottom-box {
+  padding-top: 100px;
+  padding-bottom: 50px;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: bbox;
+  text-align: center;
+  max-width: 65%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cont2 .bottom-box h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.cont2 .bottom-box p {
+  color: #282384;
+}
+
+.cont2 .bottom-box .form button {
+  border: none;
+  background: #05d69b;
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  width: 120px;
+}
+
+.cont2 .bottom-box .form input[type="text"] {
+  border: none;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  height: 27px;
+  width: 40%;
+  margin-right: 20px;
+}
+
+.cont3 {
+  background: #060339;
+  -webkit-clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%, 0 0);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  color: white;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

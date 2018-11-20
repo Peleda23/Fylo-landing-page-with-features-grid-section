@@ -96,19 +96,42 @@ body {
 
 .cont2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
+  grid-column-gap: 70px;
   grid-template-areas: 
     "top top top"
     "img-box box1 box2"
     "img-box box3 box4"
     "bbox bbox bbox";
+  padding: 0 $padding-side 0 $padding-side;  
+    h1 {
+      font-family: $headings;
+    }
+    p {
+      color: color(grey);
+      font-size: 14px;
+      font-weight: 400;
+    }
   .top-box {
     grid-area: top;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    h1 {
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
   }
   .img-box {
     grid-area: img-box;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }  
   .box1 {
     grid-area: box1;
@@ -123,6 +146,44 @@ body {
     grid-area: box4;
   }
   .bottom-box {
+    padding-top: 100px;
+    padding-bottom: 50px;
     grid-area: bbox;
+    text-align: center;
+    max-width: 65%;
+    justify-self: center;
+    h1 {
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    p {
+      color: color(dark-blue);
+    }
+    .form {
+      button {
+        border: none;
+        background: color(green1);
+        color: white;
+        border-radius: 3px;
+        height: 30px;
+        width: 120px;
+      }
+      input[type="text"] {
+        border: none;
+        box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+        height: 27px;
+        width: 40%;
+        margin-right: 20px;
+      }
+    }
   }
+}
+
+.cont3 {
+  background: color(very-dark-blue);
+  clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%, 0 0);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  color: white;
+  font-size: 14px;
 }
