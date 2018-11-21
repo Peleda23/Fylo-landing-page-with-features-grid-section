@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,600,600i");
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .cont1 {
@@ -64,7 +64,7 @@ body {
 
 .cont1 .heading h1 {
   color: white;
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
   font-size: 30px;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .cont2 h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .cont2 p {
@@ -220,9 +220,111 @@ body {
           clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%, 0 0);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: 2fr 1fr 1fr 1fr 3fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 3fr;
   color: white;
   font-size: 14px;
+  padding: 120px 40px 70px 40px;
+}
+
+.cont3 .nav-bottom {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
+.cont3 .top {
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.cont3 .wrapper1 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cont3 .wrapper2 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cont3 .wrapper2 ul {
+  list-style-type: none;
+  border-left: 1px solid white;
+  margin: 0;
+}
+
+.cont3 .wrapper2 ul li {
+  line-height: 21px;
+}
+
+.cont3 .wrapper3 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cont3 .wrapper3 ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.cont3 .wrapper3 ul li {
+  line-height: 21px;
+}
+
+.cont3 .wrapper4 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cont3 .wrapper4 ul {
+  list-style-type: none;
+  border-right: 1px solid white;
+  padding-right: 40px;
+  margin: 0;
+}
+
+.cont3 .wrapper4 ul li {
+  line-height: 21px;
+}
+
+.cont3 .wrapper4 ul li span {
+  display: inline-block;
+}
+
+.cont3 .wrapper5 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-left: 60px;
+}
+
+.cont3 .wrapper5 h1 {
+  font-size: 12px;
+}
+
+.cont3 .wrapper5 .form2 {
+  text-align: right;
+}
+
+.cont3 .wrapper5 .form2 input[type="text"] {
+  border: none;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  height: 27px;
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.cont3 .wrapper5 .form2 button {
+  border: none;
+  background: #05d69b;
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  width: 140px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */

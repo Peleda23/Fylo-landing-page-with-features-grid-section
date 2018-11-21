@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,600,600i');
 
-$headings: 'Raleway', sans-serif;
-$body: 'Open Sans', sans-serif;
+$body: 'Raleway', sans-serif;
+$headings: 'Open Sans', sans-serif;
 $padding-side: 40px;
 $padding-top: 25px;
 $padding-bottom: 100px;
@@ -183,7 +183,86 @@ body {
   background: color(very-dark-blue);
   clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%, 0 0);
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr 3fr;
   color: white;
   font-size: 14px;
+  padding: 120px $padding-side 70px $padding-side;
+  
+  .nav-bottom {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $body;
+  }
+  .top {
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .wrapper1 {
+    justify-self: center;
+  }
+  .wrapper2 {
+    justify-self: center;
+    ul {
+      list-style-type: none;
+      border-left: 1px solid white;
+      margin: 0;
+      li {
+        line-height: 21px;
+      }
+    }
+  }
+  .wrapper3 {
+    justify-self: center;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      li {
+        line-height: 21px;
+      }
+    }
+  }
+  .wrapper4 {
+    justify-self: center;
+    ul {
+      list-style-type: none;
+      border-right: 1px solid white;
+      padding-right: 40px;
+      margin: 0;
+      li {
+        line-height: 21px;
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .wrapper5 {
+    justify-self: center;
+    padding-left: 60px;
+    h1 {
+      font-size: 12px;
+    }
+    .form2 {
+      text-align: right;
+      input[type="text"] {
+        border: none;
+        box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+        height: 27px;
+        width: 100%;
+        border-radius: 3px;
+        margin-bottom: 10px;
+      }
+      button {
+        border: none;
+        background: color(green1);
+        color: white;
+        border-radius: 3px;
+        height: 30px;
+        width: 140px;
+        font-size: 12px;
+      }
+    }
+  }
 }
